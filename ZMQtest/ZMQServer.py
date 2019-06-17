@@ -9,7 +9,7 @@ socket = context.socket(zmq.PUB)
 socket.bind("tcp://*:%s" % port)
 topic = "PIDData"
 while True:
-    messagedata = random.randrange(1,215)
+    messagedata = random.randrange(1,215)#modify this to 
     print ("{} {}".format(topic, messagedata))
     socket.send_string("{} {}".format(topic, messagedata))
 
